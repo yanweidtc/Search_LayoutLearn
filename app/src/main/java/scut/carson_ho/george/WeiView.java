@@ -44,6 +44,12 @@ public class WeiView extends LinearLayout {
         this.context = context;
     }
 
+    /**
+     * 初始化自定义属性
+     * @param context
+     * @param attrs
+     */
+
     private void initAttrs(Context context, AttributeSet attrs) {
         // 控件资源名称
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.WeiView) ;
@@ -67,6 +73,25 @@ public class WeiView extends LinearLayout {
 
         // 释放资源
         typedArray.recycle();
+
+    }
+
+    /**
+     * 关注b
+     * 初始化搜索框
+     */
+
+    private void init() {
+
+    }
+
+    /**
+     * 关注c:
+     * 绑定搜索框xml视图
+     */
+    private void initView() {
+
+        // 1. 绑定R.layout.search
 
     }
 }
