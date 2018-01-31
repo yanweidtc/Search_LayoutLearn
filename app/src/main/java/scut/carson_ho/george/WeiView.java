@@ -69,16 +69,22 @@ public class WeiView extends LinearLayout {
     public WeiView(Context context){
         super(context);
         this.context = context;
+        init();
     }
 
     public WeiView(Context context, AttributeSet attrs){
         super(context,attrs);
         this.context = context;
+        initAttrs(context, attrs);
+        init();
+
     }
 
     public WeiView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
+        initAttrs(context, attrs);
+        init();
     }
 
     /**
@@ -210,6 +216,20 @@ public class WeiView extends LinearLayout {
             }
         });
 
+        /**
+         *  点击返回按键后的事件
+         */
+        iv_wei_searchBack.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 注：
+                if(!(bCallBack == null)){
+                    bCallBack.BackAction();
+                }
+
+                //根据
+            }
+        });
     }
 
     /**
